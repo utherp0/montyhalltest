@@ -20,6 +20,9 @@ public class Experiment1
     int success_stick = 0;
     int success_twist = 0;
 
+    // Time the experiment
+    long start = System.currentTimeMillis();
+
     // Repeat the experiment 'runs' times
     for( int loop = 0; loop < runs; loop++ )
     {
@@ -64,7 +67,11 @@ public class Experiment1
     }
 
     // Build a response package
-    response.append( "Total runs: " + runs + " failures: " + failures + " success(stick): " + success_stick + " success(twist): " + success_twist );
+    response.append( "Total runs: " + runs +
+                     " in " + ( System.currentTimeMillis() - start ) + "ms." +
+                     " failures: " + failures +
+                     " success(stick): " + success_stick +
+                     " success(twist): " + success_twist );
 
     return response.toString();
   }
