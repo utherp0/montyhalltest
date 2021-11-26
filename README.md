@@ -1,8 +1,18 @@
 # montyhalltest Project
 
-This project uses Quarkus, the Supersonic Subatomic Java Framework.
+Quick little experiment, hosted as a restful service using Quarkus, for testing the odd stats you get from the 'Monty Hall' problem.
 
-If you want to learn more about Quarkus, please visit its website: https://quarkus.io/ .
+As some in the UK who doesn't know who Monty Hall is, here's the problem stated in English:
+
+It's a permutation of the 'three shells' trick. In this case there are three boxes, in one of which the person running the game has placed a prize.
+
+You choose one box. The person running it then offers you one of the other boxes as a swap. They know which box it is in and will offer you that box IF you haven't chosen it. You then decide whether to stick with the box you have or take their offered one instead. You then open the box.
+
+With this model you have a 50/50 chance of getting the prize, even though you start with a 1 in 3 chance. More interestingly is the statistical probability of winning depending on whether you choose the offered box or stick with the one you have. It comes out as 2/3 successful if you choose to take the offered box; in total it's 50:50 to win, 1/6 to win if you choose and then stick, 1/3 if you choose to take the box. 
+
+Those stats feel wrong but the test proves it.
+
+Follow the instructions below to run the test - the experiment is available at /experiment1 with an optional parameter of 'runs' (i.e. /experiment1?runs=2000000)
 
 ## Running the application in dev mode
 
